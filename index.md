@@ -1,12 +1,12 @@
 ---
-title       : 
-subtitle    : 
-author      : 
-job         : 
+title       : Data Products Assignment  
+subtitle    : Assignment  
+author      : Eugene Terblanche
+job         : Engineer
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
-highlighter : highlight.js  # {highlight.js, prettify, highlight}
+highlighter : highlight.js  # {highlight.js, prettify, git push -u origin masterhighlight}
 hitheme     : tomorrow      # 
-widgets     : []            # {mathjax, quiz, bootstrap}
+widgets     : [mathjax, quiz, bootstrap]            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 ---
@@ -20,6 +20,28 @@ knit        : slidify::knit2slides
 --- .class #id 
 
 ## Slide 2
+
+Test some stuff
+
+---
+
+## Slide 3
+
+Test some stuff v3
+
+---
+
+## Slide 4
+
+Test some stuff
+
+---
+
+## Slide 5
+
+Test some stuff 5
+
+---
 
 
 
