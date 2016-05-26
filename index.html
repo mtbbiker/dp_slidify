@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Data Products Assignment</title>
+  <title>Cooper V02max Test calculator</title>
   <meta charset="utf-8">
-  <meta name="description" content="Data Products Assignment">
+  <meta name="description" content="Cooper V02max Test calculator">
   <meta name="author" content="Eugene Terblanche">
   <meta name="generator" content="slidify" />
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -34,8 +34,8 @@
     <!-- LOGO SLIDE -->
         <slide class="title-slide segue nobackground">
   <hgroup class="auto-fadein">
-    <h1>Data Products Assignment</h1>
-    <h2>Assignment</h2>
+    <h1>Cooper V02max Test calculator</h1>
+    <h2>Data Products Assignment part II</h2>
     <p>Eugene Terblanche<br/>Engineer</p>
   </hgroup>
   <article></article>  
@@ -45,25 +45,45 @@
     <!-- SLIDES -->
     <slide class="" id="slide-1" style="background:;">
   <hgroup>
-    <h2>Read-And-Delete</h2>
+    <h2>Simple V02max Test</h2>
   </hgroup>
   <article data-timings="">
     <ol>
-<li>Edit YAML front matter</li>
-<li>Write using R Markdown</li>
-<li>Use an empty line followed by three dashes to separate slides!</li>
+<li>V02 max is an Indicator of an individual aerobic endurance capability</li>
+<li>Comprehensive Test are difficult and expensive to conduct</li>
+<li>Cooper 12 min walk Test is simple alternative</li>
 </ol>
+
+<p>The Complete Test procedure can be found at</p>
+
+<p><a href="https://github.com/mtbbiker/dp_shiny">https://github.com/mtbbiker/dp_shiny</a></p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="class" id="id" style="background:;">
+<slide class="" id="slide-2" style="background:;">
   <hgroup>
-    <h2>Slide 2</h2>
+    <h2>Test Procedure</h2>
   </hgroup>
   <article data-timings="">
-    <p>Test some stuff</p>
+    <p>To undertake this test you will require:</p>
+
+<ul>
+<li> 400 metre track</li>
+<li> Stopwatch</li>
+<li> Whistle</li>
+<li> Assistant</li>
+</ul>
+
+<p>This test requires the athlete to run as far as possible in 12 minutes.</p>
+
+<ul>
+<li>   The athlete warms up for 10 minutes</li>
+<li>   The assistant gives the command “GO”, starts the stopwatch and the athlete commences the test</li>
+<li>   The assistant keeps the athlete informed of the remaining time at the end of each lap (400m)</li>
+<li>   The assistant blows the whistle when the 12 minutes has elapsed and records the distance the athlete covered to the nearest 10 metres</li>
+</ul>
 
   </article>
   <!-- Presenter Notes -->
@@ -71,10 +91,17 @@
 
 <slide class="" id="slide-3" style="background:;">
   <hgroup>
-    <h2>Slide 3</h2>
+    <h2>Shiny Test Calculator</h2>
   </hgroup>
   <article data-timings="">
-    <p>Test some stuff v3</p>
+    <p>Capture the following to calculate V02max</p>
+
+<ul>
+<li><p>Select the Athlete&#39;s Gender</p></li>
+<li><p>Select Age range of Athlete</p></li>
+<li><p>Capture the distance walked by Athlete in 12 mins</p></li>
+<li><p>Calculate the V02 max</p></li>
+</ul>
 
   </article>
   <!-- Presenter Notes -->
@@ -82,29 +109,23 @@
 
 <slide class="" id="slide-4" style="background:;">
   <hgroup>
-    <h2>Slide 4</h2>
+    <h2>V02max Formula</h2>
   </hgroup>
   <article data-timings="">
-    <p>Test some stuff</p>
+    <p>The V02max is calculated as follows</p>
 
-  </article>
-  <!-- Presenter Notes -->
-</slide>
+<pre><code class="r">#Example distance
+distance &lt;- 2536 
+vo2max &lt;- function(distance) (distance - 504.9) / 44.73
 
-<slide class="" id="slide-5" style="background:;">
-  <hgroup>
-    <h2>Slide 5</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>Test some stuff 5</p>
+paste(round(vo2max(distance), digits = 3) , &quot; mls/kg/min&quot;)
+</code></pre>
 
-  </article>
-  <!-- Presenter Notes -->
-</slide>
+<pre><code>## [1] &quot;45.408  mls/kg/min&quot;
+</code></pre>
 
-<slide class="" id="slide-6" style="background:;">
-  <article data-timings="">
-    
+<p>From the table provided (calculator at <a href="https://mtbbiker.shinyapps.io/dp_shiny">Link</a>), this will be an excellent result for a 40-49yr old male.</p>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -115,38 +136,26 @@
     <ul>
       <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=1 title='Read-And-Delete'>
+        data-slide=1 title='Simple V02max Test'>
          1
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Slide 2'>
+        data-slide=2 title='Test Procedure'>
          2
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Slide 3'>
+        data-slide=3 title='Shiny Test Calculator'>
          3
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Slide 4'>
+        data-slide=4 title='V02max Formula'>
          4
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='Slide 5'>
-         5
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=6 title='NA'>
-         6
       </a>
     </li>
   </ul>

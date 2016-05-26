@@ -1,6 +1,6 @@
 ---
-title       : Data Products Assignment  
-subtitle    : Assignment  
+title       : Cooper V02max Test calculator  
+subtitle    : Data Products Assignment part II
 author      : Eugene Terblanche
 job         : Engineer
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
@@ -11,38 +11,66 @@ mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 ---
 
-## Read-And-Delete
+## Simple V02max Test
 
-1. Edit YAML front matter
-2. Write using R Markdown
-3. Use an empty line followed by three dashes to separate slides!
+1. V02 max is an Indicator of an individual aerobic endurance capability
+2. Comprehensive Test are difficult and expensive to conduct
+3. Cooper 12 min walk Test is simple alternative
 
---- .class #id 
 
-## Slide 2
 
-Test some stuff
+The Complete Test procedure can be found at
 
----
-
-## Slide 3
-
-Test some stuff v3
+https://github.com/mtbbiker/dp_shiny
 
 ---
+## Test Procedure
 
-## Slide 4
+To undertake this test you will require:
 
-Test some stuff
+  *  400 metre track
+  *  Stopwatch
+  *  Whistle
+  *  Assistant
+
+This test requires the athlete to run as far as possible in 12 minutes.
+
+ *    The athlete warms up for 10 minutes
+ *    The assistant gives the command “GO”, starts the stopwatch and the athlete commences the test
+ *    The assistant keeps the athlete informed of the remaining time at the end of each lap (400m)
+ *    The assistant blows the whistle when the 12 minutes has elapsed and records the distance the athlete covered to the nearest 10 metres
 
 ---
+## Shiny Test Calculator
 
-## Slide 5
 
-Test some stuff 5
+
+Capture the following to calculate V02max
+
+
+  *    Select the Athlete's Gender
+ 
+  *    Select Age range of Athlete
+ 
+  *    Capture the distance walked by Athlete in 12 mins
+ 
+  *    Calculate the V02 max
 
 ---
+## V02max Formula
+
+The V02max is calculated as follows
 
 
+```r
+#Example distance
+distance <- 2536 
+vo2max <- function(distance) (distance - 504.9) / 44.73
 
+paste(round(vo2max(distance), digits = 3) , " mls/kg/min")
+```
 
+```
+## [1] "45.408  mls/kg/min"
+```
+From the table provided (calculator at [Link](https://mtbbiker.shinyapps.io/dp_shiny)), this will be an excellent result for a 40-49yr old male.
